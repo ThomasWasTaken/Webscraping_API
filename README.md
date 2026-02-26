@@ -12,17 +12,3 @@ A robust, automated web scraper built with **Python** and **Playwright** to moni
 * **Dynamic Content Handling**: Uses Playwright to handle JavaScript-rendered sites and automated scrolling to trigger "lazy-loading" elements.
 * **Instant Alerts**: Integrated with the Telegram Bot API for real-time mobile notifications.
 * **Clean Data**: Text normalization ensures you don't get "false positive" alerts due to extra whitespace or formatting shifts.
-
----
-
-## 🚀 Getting Started
-
-### 1. Prerequisites
-Ensure you have Python 3.8+ installed.
-
-### 2. Installation
-Clone the repository and install the required dependencies:
-
-```bash
-pip install playwright requests
-playwright install chromium
