@@ -1,6 +1,28 @@
-🏢 Danish Housing MonitorA robust, automated web scraper built with Python and Playwright to monitor real estate listings in Denmark. It currently supports tracking CEJ and Kereby, sending instant notifications to Telegram the moment a new apartment hits the market.✨ FeaturesDual-Mode Detection:Hash-based: Monitors specific XPaths for any text/content changes (ideal for CEJ).Set-based: Tracks unique listing URLs to identify exactly which new properties were added (ideal for Kereby).Dynamic Content Handling: Uses Playwright to handle JavaScript-rendered sites and automated scrolling to trigger "lazy-loading" elements.Instant Alerts: Integrated with the Telegram Bot API for real-time mobile notifications.Clean Data: Text normalization ensures you don't get "false positive" alerts due to extra whitespace or formatting shifts.🚀 Getting Started1. PrerequisitesEnsure you have Python 3.8+ installed.2. InstallationClone the repository and install the required dependencies:Bashgit clone https://github.com/yourusername/housing-monitor.git
-cd housing-monitor
+# 🏢 Danish Housing Monitor
+
+A robust, automated web scraper built with **Python** and **Playwright** to monitor real estate listings in Denmark. It currently supports tracking **CEJ** and **Kereby**, sending instant notifications to **Telegram** the moment a new apartment hits the market.
+
+---
+
+## ✨ Features
+
+* **Dual-Mode Detection**: 
+    * **Hash-based**: Monitors specific XPaths for any text/content changes (ideal for CEJ).
+    * **Set-based**: Tracks unique listing URLs to identify exactly which new properties were added (ideal for Kereby).
+* **Dynamic Content Handling**: Uses Playwright to handle JavaScript-rendered sites and automated scrolling to trigger "lazy-loading" elements.
+* **Instant Alerts**: Integrated with the Telegram Bot API for real-time mobile notifications.
+* **Clean Data**: Text normalization ensures you don't get "false positive" alerts due to extra whitespace or formatting shifts.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Prerequisites
+Ensure you have Python 3.8+ installed.
+
+### 2. Installation
+Clone the repository and install the required dependencies:
+
+```bash
 pip install playwright requests
 playwright install chromium
-3. ConfigurationOpen the script and update the following variables with your credentials:BOT_TOKEN: Your Telegram Bot API token (from @BotFather).CHAT_ID: Your personal Telegram Chat ID (from @userinfobot).4. UsageRun the monitor in your terminal:Bashpython monitor.py
-🛠️ How it WorksThe script operates in a continuous loop with a 30-second cooldown to avoid rate-limiting.SiteMethodLogicCEJHashCompares an MD5 hash of the concatenated text from the listing grid.KerebySetStores a collection of unique listing URLs and calculates the difference (current - last_seen).📝 LicenseThis project is for educational and personal use. Please respect the robots.txt files and Terms of Service of the monitored websites.Would you like me to generate a requirements.txt file or a .gitignore to make this repo even more professional?
