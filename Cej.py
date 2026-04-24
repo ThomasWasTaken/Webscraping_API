@@ -22,8 +22,8 @@ SITES_TO_WATCH = [
 
 
 # Telegram bot settings
-BOT_TOKEN = "8671894349:AAGjNwzoWIV0-w-jLOyxQZ-U_5YnarWkqoc"
-CHAT_ID = "-1003730924906"
+BOT_TOKEN = 
+CHAT_ID = 
 
 # --- Helper functions ---
 def normalize_text(text):
